@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -125,20 +124,13 @@
   users.users.jannis = {
     isNormalUser = true;
     description = "Jannis";
+    home = "/home/jannis";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
     ];
   };
 
-  # Define home manager
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "jannis" = import ../../modules/home-manager/mainpc/home.nix;
-    };
-  };
-  
   # Install Librewolf.
   programs.firefox = {
   enable = true;
