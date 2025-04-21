@@ -10,13 +10,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hosts/mainpc/configuration.nix
-        inputs.home-manager.nixosModules.default
-      ];
+  outputs = { self, nixpkgs, ... }@inputs: 
+  {
+    nixosConfigurations = {
+      mainpc = nixpkgs.lib.nixosSystem{
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/mainpc/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
   };
 }
