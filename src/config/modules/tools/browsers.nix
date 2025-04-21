@@ -47,4 +47,16 @@
       };
     };
   };
+
+  # Set librewolf as default browser
+  xdg.mime = {
+    enable = true;
+    # Set LibreWolf as the default for common web protocols/types
+    defaultApplications = {
+      "text/html" = [ "librewolf.desktop" ];
+      "x-scheme-handler/http" = [ "librewolf.desktop" ];
+      "x-scheme-handler/https" = [ "librewolf.desktop" ];
+      "x-scheme-handler/about" = [ "librewolf.desktop" ]; # Optional, for about: links
+    };
+  };
 }
