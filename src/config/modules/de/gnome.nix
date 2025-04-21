@@ -53,5 +53,5 @@
     gnomeExtensions.fullscreen-avoider
 
     gnome-tweaks
-  ]
+  ];
 }
