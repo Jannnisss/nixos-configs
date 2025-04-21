@@ -26,10 +26,10 @@
       ];
       favorite-apps = [
         "librewolf.desktop"
-        "steam.desktop"
-        "vesktop.desktop"
-        "spotify.desktop"
         "nautilus.desktop"
+        "steam.desktop"
+        "spotify.desktop"
+        "vesktop.desktop"
         ];
     };
     # Enable dynamic workspaces.
