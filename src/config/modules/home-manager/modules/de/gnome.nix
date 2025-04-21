@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
   dconf.settings = {
@@ -14,7 +14,7 @@
     "org/gnome/desktop/peripherals/mouse" = {
       natural-scroll = false;
       accel-profile = "flat";
-      speed = 0.5;
+      speed = 0.0;
     };
     # Disable inactivity sleep.
     "org/gnome/settings-daemon/plugins/power" = {
@@ -24,7 +24,7 @@
     "org/gtk/gtk4/settings/file-chooser" = {
       show-hidden = true;
     };
-    # DIsable idle delay.
+    # Disable idle delay.
     "org/gnome/desktop/session" = {
       idle-delay = lib.hm.gvariant.mkUint32 0;
     };
