@@ -10,6 +10,20 @@
 
   # Remove not needed GNOME packages.
   environment.gnome.excludePackages = with pkgs; [
+    gnomeExtensions.applications-menu
+    gnomeExtensions.smart-auto-move
+    gnomeExtensions.launch-new-instance
+    gnomeExtensions.light-style
+    gnomeExtensions.native-window-placement
+    gnomeExtensions.places-status-indicator
+    gnomeExtensions.removable-drive-menu
+    gnomeExtensions.screenshot-window-sizer
+    gnomeExtensions.status-icons
+    gnomeExtensions.system-monitor
+    gnomeExtensions.window-list
+    gnomeExtensions.windownavigator
+    gnomeExtensions.workspace-indicator
+
     baobab      # disk usage analyzer
     cheese      # photo booth
     eog         # image viewer
