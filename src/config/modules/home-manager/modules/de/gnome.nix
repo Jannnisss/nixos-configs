@@ -2,6 +2,27 @@
 
 {
   dconf.settings = {
+"org/gnome/shell" = {
+      disable-user-extensions = false;
+      disabled-extensions = "disabled";
+      enabled-extensions = [
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "fullscreen-avoider@noobsai.github.com"
+        "grand-theft-focus@zalckos.github.com"
+        "app-hider@lynith.dev"
+      ];
+      favorite-apps = [
+        "librewolf.desktop"
+        "steam.desktop"
+        "vesktop.desktop"
+        "spotify.desktop"
+        "nautilus.desktop"
+        ];
+    };
+    # Enable dynamic workspaces.
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
+    };
     # Place minimize, maximize, and close buttons on the right (default order):
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";

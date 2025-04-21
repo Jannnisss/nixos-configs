@@ -48,6 +48,7 @@
 
   # Add GNOME packages and shell extensions
   environment.systemPackages = with pkgs; [
+    gnomeExtensions.app-hider
     gnomeExtensions.grand-theft-focus
     gnomeExtensions.appindicator
     gnomeExtensions.fullscreen-avoider
