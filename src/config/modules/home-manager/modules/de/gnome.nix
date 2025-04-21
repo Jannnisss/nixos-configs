@@ -1,6 +1,19 @@
 { config, pkgs, inputs, lib, ... }:
 
 {
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true; # important for Steam on XWayland
+    name = "Adwaita";
+    size = 24;
+    package = pkgs.adwaita-icon-theme;
+  };
+
+  home.sessionVariables = {
+    XCURSOR_THEME = "Adwaita";
+    XCURSOR_SIZE = "24";
+  };
+
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
