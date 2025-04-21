@@ -4,9 +4,9 @@
   # Configure Home Manager settings for the user "jannis"
   home-manager.users.jannis = {
     
-    # Import Submodules
+    # Import Home Manager submodules.
     imports = [
-      ../../modules/gnome.nix
+      ../../modules/de/gnome.nix
     ];
 
     # The home.packages option allows you to install Nix packages into your

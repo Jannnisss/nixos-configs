@@ -13,11 +13,11 @@
   outputs = { self, nixpkgs, ... }@inputs: 
   {
     nixosConfigurations = {
-      mainpc = nixpkgs.lib.nixosSystem{
+      gamingpc = nixpkgs.lib.nixosSystem{
         specialArgs = {inherit inputs;};
         modules = [
-          ./modules/home-manager/hosts/mainpc/home.nix
-          ./hosts/mainpc/configuration.nix
+          ./modules/home-manager/hosts/gamingpc/home.nix
+          ./hosts/gamingpc/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
