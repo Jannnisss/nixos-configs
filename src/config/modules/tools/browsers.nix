@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     ungoogled-chromium
+    tor
   ];
 
   # Install LibreWolf.
