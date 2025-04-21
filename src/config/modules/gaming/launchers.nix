@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     lutris
+    prismlauncher
+    modrinth-app
   ];
 
   programs.steam = {
