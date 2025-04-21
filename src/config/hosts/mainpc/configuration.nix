@@ -132,12 +132,13 @@
   };
 
   # Define home manager
-  #home-manager = {
-  #  extraSpecialArgs = {inherit inputs;};
-  #  users = {
-  #    "jannis" = import ./home.nix
-  #  }
-  #};
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "jannis" = import ../../modules/home-manager/mainpc/home.nix;
+    };
+  };
+  
   # Install Librewolf.
   programs.firefox = {
   enable = true;
