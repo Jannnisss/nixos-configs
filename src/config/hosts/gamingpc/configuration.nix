@@ -23,6 +23,7 @@
       # Define tool apps
       ../../modules/tools/office.nix
       ../../modules/tools/browsers.nix
+      ../../modules/tools/encryption.nix
 
       # Define gaming apps
       ../../modules/gaming/launchers.nix
