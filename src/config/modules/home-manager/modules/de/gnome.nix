@@ -2,7 +2,7 @@
 
 {
   dconf.settings = {
-"org/gnome/shell" = {
+    "org/gnome/shell" = {
       disable-user-extensions = false;
       disabled-extensions = "disabled";
       enabled-extensions = [
@@ -53,6 +53,16 @@
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
       enable-hot-corners = false;
+    };
+    # Set keybinds for fullscreen toggle
+    "org/gnome/desktop/wm/keybindings" = {
+      # Set fullscreen toggle keybind.
+      toggle-fullscreen = ["<Super>Return"];
+    };
+     # Remap screenshot keybindings
+    "org/gnome/shell/keybindings" = {
+      # Remap interactive screenshot UI to Super+Shift+S
+      show-screenshot-ui = ["<Super><Shift>s"];
     };
   };
 }
