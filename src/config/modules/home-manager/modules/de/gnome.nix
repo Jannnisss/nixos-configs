@@ -71,12 +71,10 @@
     };
     # Set keybinds for fullscreen toggle
     "org/gnome/desktop/wm/keybindings" = {
-      # Set fullscreen toggle keybind.
       toggle-fullscreen = ["<Super>Return"];
     };
-     # Remap screenshot keybindings
+    # Remap interactive screenshot UI to Super+Shift+S
     "org/gnome/shell/keybindings" = {
-      # Remap interactive screenshot UI to Super+Shift+S
       show-screenshot-ui = ["<Super><Shift>s"];
     };
   };
