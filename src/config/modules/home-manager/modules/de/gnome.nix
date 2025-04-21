@@ -52,7 +52,7 @@
     # Disable hot corners.
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
-      enable-hot-corners = true;
+      enable-hot-corners = false;
     };
   };
 }
