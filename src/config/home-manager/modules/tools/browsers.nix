@@ -59,7 +59,7 @@
   };
 
   # Set librewolf as default browser
-  xdg.mime = {
+  xdg.mimeApps = {
     enable = true;
     # Set LibreWolf as the default for common web protocols/types
     defaultApplications = {

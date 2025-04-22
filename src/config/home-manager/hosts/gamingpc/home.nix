@@ -7,7 +7,7 @@
   
   # Configure Home Manager settings for the user "jannis"
   home-manager.users.jannis = {
-    
+
     # Import Home Manager submodules.
     imports = [
       # Define Desktop enviroment
@@ -18,12 +18,12 @@
       ../../modules/tools/browsers.nix
       ../../modules/tools/encryption.nix
 
-      # Define media apps
-      ../../modules/media/music.nix
-
       # Define social apps
       ../../modules/social/voicechat.nix
     ];
+
+    # Allow unfree for Home Manager
+    nixpkgs.config.allowUnfree = true;
 
     # The home.packages option allows you to install Nix packages into your
     # environment.

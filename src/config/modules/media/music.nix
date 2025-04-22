@@ -15,7 +15,7 @@
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   in
   {
-   enable = true;
+    enable = true;
 
     enabledExtensions = with spicePkgs.extensions; [
       shuffle
