@@ -5,7 +5,7 @@
     inputs.spicetify-nix.nixosModules.default
   ];
 
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     
   ];
 
@@ -32,7 +32,7 @@
       hideNowPlayingViewButton
     ];
 
-  theme = spicePkgs.themes.sleek;
-  colorScheme = "Nord";
+    theme = spicePkgs.themes.sleek;
+    colorScheme = "Nord";
   }; 
 }

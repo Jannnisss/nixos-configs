@@ -10,7 +10,19 @@
     
     # Import Home Manager submodules.
     imports = [
+      # Define Desktop enviroment
       ../../modules/de/gnome.nix
+
+      # Define tool apps
+      ../../modules/tools/office.nix
+      ../../modules/tools/browsers.nix
+      ../../modules/tools/encryption.nix
+
+      # Define media apps
+      ../../modules/media/music.nix
+
+      # Define social apps
+      ../../modules/social/voicechat.nix
     ];
 
     # The home.packages option allows you to install Nix packages into your

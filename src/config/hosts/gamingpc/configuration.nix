@@ -20,20 +20,10 @@
       ../../modules/development/cli.nix
       ../../modules/development/ides.nix
 
-      # Define tool apps
-      ../../modules/tools/office.nix
-      ../../modules/tools/browsers.nix
-      ../../modules/tools/encryption.nix
-
       # Define gaming apps
       ../../modules/gaming/launchers.nix
       ../../modules/gaming/modding.nix
 
-      # Define media apps
-      ../../modules/media/music.nix
-
-      # Define social apps
-      ../../modules/social/voicechat.nix
     ];
 
   # Bootloader.
