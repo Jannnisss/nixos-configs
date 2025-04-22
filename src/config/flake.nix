@@ -16,7 +16,7 @@
       gamingpc = nixpkgs.lib.nixosSystem{
         specialArgs = {inherit inputs;};
         modules = [
-          ./modules/home-manager/hosts/gamingpc/home.nix
+          ./home-manager/hosts/gamingpc/home.nix
           ./hosts/gamingpc/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
