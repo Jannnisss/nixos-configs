@@ -44,7 +44,7 @@
     };
     # Set theme to dark.
     "org/gnome/desktop/interface" = {
-      gtk-theme = "Adwaita-dark";
+      gtk-theme = "prefer-dark";
     };
     # Disable mouse acceleration, set mouse speed and disable natural scroll.
     "org/gnome/desktop/peripherals/mouse" = {
