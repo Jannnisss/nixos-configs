@@ -23,8 +23,6 @@
         modules = [
           ./home-manager/hosts/gamingpc/home.nix
           ./hosts/gamingpc/configuration.nix
-          inputs.home-manager.nixosModules.default
-          inputs.spicetify-nix.nixosModules.default
         ];
       };
     };

@@ -1,6 +1,10 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
+  
   # Configure Home Manager settings for the user "jannis"
   home-manager.users.jannis = {
     
