@@ -23,7 +23,6 @@
       # Define gaming apps
       ../../modules/gaming/launchers.nix
       ../../modules/gaming/modding.nix
-
     ];
 
   # Bootloader.

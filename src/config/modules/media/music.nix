@@ -2,11 +2,11 @@
 
 {
   imports = [
-    inputs.spicetify-nix.nixosModules.default
+    inputs.spicetify-nix.nixosModules.default  
   ];
 
-  home.packages = with pkgs; [
-    
+  environment.systemPackages = with pkgs; [
+
   ];
 
   # Install spotify with customization.
