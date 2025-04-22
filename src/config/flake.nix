@@ -25,8 +25,7 @@
     nixosConfigurations = {
       gamingpc = nixpkgs.lib.nixosSystem{
         specialArgs = {inherit inputs;};
-        modules = [
-          ({ ... }: { nixpkgs.config.allowUnfree = true; })          
+        modules = [      
           ./home-manager/hosts/gamingpc/home.nix
           ./hosts/gamingpc/configuration.nix
         ];
