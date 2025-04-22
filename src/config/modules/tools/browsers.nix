@@ -13,6 +13,15 @@
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
+      DisableDataSubmission = true;
+      DisableCrashReports = true;
+      DisableSafeBrowsing = true;
+      DefaultSearchEngine = "Startpage";
+      SearchBar = "unified";
+      Homepage = {
+        StartPage = "blank";
+        URL = "about:blank";
+      };
       Preferences = {
         #"privacy.resistFingerprinting" = false;
       };
