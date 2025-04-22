@@ -20,6 +20,9 @@
 
       # Define social apps
       ../../modules/social/voicechat.nix
+
+      # Define media apps
+      ../../modules/media/music.nix
     ];
 
     # Allow unfree for Home Manager
