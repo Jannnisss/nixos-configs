@@ -12,7 +12,7 @@
     enable = true;
     profiles.default = {
       enableUpdateCheck = false;
-      userSettings {
+      userSettings = {
         "telemetry.telemetryLevel" = 0;
       };
       extensions = with pkgs.vscode-marketplace; [
