@@ -5,6 +5,9 @@
     inputs.home-manager.nixosModules.default
   ];
   
+  # Configure extra special args for Home-Manager
+  home-manager.extraSpecialArgs = { inherit inputs; };
+  
   # Configure Home Manager settings for the user "jannis"
   home-manager.users.jannis = {
 
@@ -20,6 +23,9 @@
 
       # Define social apps
       ../../modules/social/voicechat.nix
+
+      # Define development apps
+      ../../modules/development/ides.nix
     ];
 
     # Allow unfree for Home Manager

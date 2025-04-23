@@ -18,7 +18,6 @@
 
       # Define development apps
       ../../modules/development/cli.nix
-      ../../modules/development/ides.nix
 
       # Define gaming apps
       ../../modules/gaming/launchers.nix
