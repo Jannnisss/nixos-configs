@@ -27,6 +27,10 @@
       # Define development apps
       ../../modules/development/ides.nix
 
+      # Define gaming apps
+      ../../modules/gaming/launchers.nix
+      ../../modules/gaming/modding.nix
+
       # Define media apps
       ../../modules/media/music.nix
     ];

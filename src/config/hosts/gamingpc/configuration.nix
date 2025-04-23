@@ -20,8 +20,7 @@
       ../../modules/development/cli.nix
 
       # Define gaming apps
-      ../../modules/gaming/launchers.nix
-      ../../modules/gaming/modding.nix
+      ../../modules/gaming/steam.nix
 
     ];
 
