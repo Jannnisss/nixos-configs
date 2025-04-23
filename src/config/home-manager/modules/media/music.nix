@@ -2,10 +2,10 @@
 
 {
   imports = [
-    inputs.spicetify-nix.nixosModules.default  
+    inputs.spicetify-nix.homeManagerModules.default  
   ];
 
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     
   ];
 

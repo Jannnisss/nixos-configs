@@ -26,6 +26,9 @@
 
       # Define development apps
       ../../modules/development/ides.nix
+
+      # Define media apps
+      ../../modules/media/music.nix
     ];
 
     # Allow unfree for Home Manager
