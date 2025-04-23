@@ -17,7 +17,7 @@
       };
       extensions = with pkgs.vscode-marketplace; [
         ms-vscode.vs-keybindings
-        bbenoist.nix
+        jnoortheen.nix-ide
       ];
     };
   };
