@@ -3,16 +3,16 @@
 {
   imports =
   [
-    # Define Desktop enviroment
+    # Import Desktop enviroments
     ./de/gnome.nix
 
-    # Define locale settings
+    # Import locale settings
     ./local/de_us.nix
 
-    # Define development apps
+    # Import development apps
     ./development/cli.nix
 
-    # Define gaming apps
+    # Import gaming apps
     ./gaming/steam.nix
   ];
 

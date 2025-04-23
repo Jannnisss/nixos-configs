@@ -2,25 +2,25 @@
 
 {
   imports = [
-    # Define desktop enviroment
+    # Import desktop enviroment configurations
     ./de/gnome.nix
 
-    # Define tool apps
+    # Import tool apps
     ./tools/office.nix
     ./tools/browsers.nix
     ./tools/encryption.nix
 
-    # Define social apps
+    # Import social apps
     ./social/voicechat.nix
 
-    # Define development apps
+    # Import development apps
     ./development/ides.nix
 
-    # Define gaming apps
+    # Import gaming apps
     ./gaming/launchers.nix
     ./gaming/modding.nix
 
-    # Define media apps
+    # Import media apps
     ./media/music.nix
   ];
 
