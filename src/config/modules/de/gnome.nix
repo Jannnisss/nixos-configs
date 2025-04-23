@@ -8,8 +8,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Disable auto suspend on login screen.
-  services.xserver.displayManager.gdm.autoSuspend = false;
+  # Enable auto suspend on login screen.
+  services.xserver.displayManager.gdm.autoSuspend = true;
 
   # Remove not needed GNOME packages.
   environment.gnome.excludePackages = with pkgs; [
