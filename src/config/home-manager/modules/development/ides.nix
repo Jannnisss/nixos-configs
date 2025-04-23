@@ -13,7 +13,7 @@
     profiles.default = {
       enableUpdateCheck = false;
       userSettings = {
-        "telemetry.telemetryLevel" = 0;
+        "telemetry.telemetryLevel" = "off";
       };
       extensions = with pkgs.vscode-marketplace; [
         ms-vscode.vs-keybindings
