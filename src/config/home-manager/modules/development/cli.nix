@@ -4,6 +4,7 @@
 
   home.packages = with pkgs; [
     tree
+    nixfmt-rfc-style
   ];
 
 } 
