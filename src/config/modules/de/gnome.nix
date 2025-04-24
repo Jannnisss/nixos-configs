@@ -27,37 +27,37 @@
     gnomeExtensions.windownavigator
     gnomeExtensions.workspace-indicator
 
-    baobab      # disk usage analyzer
-    cheese      # photo booth
-    eog         # image viewer
-    epiphany    # web browser
+    baobab # disk usage analyzer
+    cheese # photo booth
+    eog # image viewer
+    epiphany # web browser
     #gedit       # text editor
     simple-scan # document scanner
     #totem       # video player
-    yelp        # help viewer
-    evince      # document viewer
+    yelp # help viewer
+    evince # document viewer
     file-roller # archive manager
-    geary       # email client
+    geary # email client
     #seahorse    # password manager
     hitori # sudoku game
     iagno # go game
     tali # poker game
     snapshot # camera
 
-    #gnome-calculator 
-    gnome-calendar 
-    gnome-characters 
-    #gnome-clocks 
+    #gnome-calculator
+    gnome-calendar
+    gnome-characters
+    #gnome-clocks
     gnome-contacts
-    gnome-font-viewer 
-    #gnome-logs 
-    gnome-maps 
-    gnome-music 
-    #gnome-photos 
+    gnome-font-viewer
+    #gnome-logs
+    gnome-maps
+    gnome-music
+    #gnome-photos
     #gnome-screenshot
-    #gnome-system-monitor 
-    gnome-weather 
-    #gnome-disk-utility 
+    #gnome-system-monitor
+    gnome-weather
+    #gnome-disk-utility
     gnome-connections
     gnome-tour
     gnome-software

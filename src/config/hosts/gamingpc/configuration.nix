@@ -2,20 +2,24 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ 
-      # Import home manager
-      inputs.home-manager.nixosModules.default
+  imports = [
+    # Import home manager
+    inputs.home-manager.nixosModules.default
 
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
 
-      # Import all system apps
-      ./../../modules/default.nix
-    ];
+    # Import all system apps
+    ./../../modules/default.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -24,7 +28,10 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   # Enable experimental features
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -56,9 +63,12 @@
     isNormalUser = true;
     description = "Jannis";
     home = "/home/jannis";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [ ];
-  };  
+  };
   # Import home manager for user
   home-manager.users.jannis = import ./../../home-manager/hosts/gamingpc/home.nix;
   home-manager.extraSpecialArgs = { inherit inputs; };

@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, nixpkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  nixpkgs,
+  ...
+}:
 
 {
 
@@ -7,7 +13,7 @@
   ];
 
   nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
-  
+
   programs.vscode = {
     enable = true;
     profiles.default = {
@@ -22,4 +28,4 @@
       ];
     };
   };
-} 
+}

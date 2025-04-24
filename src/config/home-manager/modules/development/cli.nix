@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, nixpkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  nixpkgs,
+  ...
+}:
 
 {
 
@@ -7,4 +13,4 @@
     nixfmt-rfc-style
   ];
 
-} 
+}

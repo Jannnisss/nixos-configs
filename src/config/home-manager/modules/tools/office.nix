@@ -1,7 +1,12 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
-    libreoffice    
+    libreoffice
   ];
 }

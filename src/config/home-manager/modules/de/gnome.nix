@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, lib, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
   # Set cursor Theme and size.
@@ -32,7 +38,7 @@
         "steam.desktop"
         "spotify.desktop"
         "vesktop.desktop"
-        ];
+      ];
     };
     # Enable dynamic workspaces.
     "org/gnome/mutter" = {
@@ -71,11 +77,11 @@
     };
     # Set keybinds for fullscreen toggle
     "org/gnome/desktop/wm/keybindings" = {
-      toggle-fullscreen = ["<Super>Return"];
+      toggle-fullscreen = [ "<Super>Return" ];
     };
     # Remap interactive screenshot UI to Super+Shift+S
     "org/gnome/shell/keybindings" = {
-      show-screenshot-ui = ["<Super><Shift>s"];
+      show-screenshot-ui = [ "<Super><Shift>s" ];
     };
   };
 }

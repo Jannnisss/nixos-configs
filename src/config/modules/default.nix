@@ -1,8 +1,11 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-  [
+  imports = [
     # Import Desktop enviroments
     ./de/gnome.nix
 
