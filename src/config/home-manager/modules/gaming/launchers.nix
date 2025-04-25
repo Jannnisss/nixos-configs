@@ -2,13 +2,25 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
 {
-  home.packages = with pkgs; [
-    lutris
-    prismlauncher
-    modrinth-app
-  ];
+  options = {
+    home-configurations.gaming.launchers = {
+      enable = lib.mkEnableOption {
+        description = "Enables game launchers home manager configurations.";
+        default = false;
+      };
+    };
+  };
+
+  config = lib.mkIf config.home-configurations.gaming.launchers.enable {
+    home.packages = with pkgs; [
+      lutris
+      prismlauncher
+      modrinth-app
+    ];
+  };
 }

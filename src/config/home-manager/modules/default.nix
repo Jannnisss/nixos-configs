@@ -11,9 +11,10 @@
     ./de/gnome.nix
 
     # Import tool apps
-    ./tools/office.nix
     ./tools/browsers.nix
-    ./tools/encryption.nix
+    ./tools/cli.nix
+    ./tools/office.nix
+    ./tools/security.nix
 
     # Import social apps
     ./social/voicechat.nix

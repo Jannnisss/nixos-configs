@@ -10,6 +10,27 @@
     ./../../modules/default.nix
   ];
 
+  home-configurations = {
+    de.gnome.enable = true;
+
+    developemt.cli.enable = true;
+    developemt.ides.enable = true;
+
+    gaming.launchers.enable = true;
+    gaming.modding.enable = true;
+
+    media.music.enable = true;
+
+    social.voicechat.enable = true;
+
+    tools.browsers = {
+      enable = true;
+      enableExtraBrowsers = true;
+    };
+    tools.security.enable = true;
+    tools.office.enable = true;
+    tools.cli.enable = true;
+  };
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.

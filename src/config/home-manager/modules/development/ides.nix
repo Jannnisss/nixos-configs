@@ -3,29 +3,37 @@
   pkgs,
   inputs,
   nixpkgs,
+  lib,
   ...
 }:
 
 {
-
-  home.packages = with pkgs; [
-
-  ];
-
-  nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
-
-  programs.vscode = {
-    enable = true;
-    profiles.default = {
-      enableUpdateCheck = false;
-      userSettings = {
-        "telemetry.telemetryLevel" = "off";
-        "editor.formatOnSave" = true;
+  options = {
+    home-configurations.developemt.ides = {
+      enable = lib.mkEnableOption {
+        description = "Enables ides home manager configurations.";
+        default = false;
       };
-      extensions = with pkgs.vscode-marketplace; [
-        ms-vscode.vs-keybindings
-        jnoortheen.nix-ide
-      ];
+    };
+  };
+
+  config = lib.mkIf config.home-configurations.developemt.ides.enable {
+
+    nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+
+    programs.vscode = {
+      enable = true;
+      profiles.default = {
+        enableUpdateCheck = false;
+        userSettings = {
+          "telemetry.telemetryLevel" = "off";
+          "editor.formatOnSave" = true;
+        };
+        extensions = with pkgs.vscode-marketplace; [
+          ms-vscode.vs-keybindings
+          jnoortheen.nix-ide
+        ];
+      };
     };
   };
 }
