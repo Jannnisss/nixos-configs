@@ -14,6 +14,13 @@
 
     # Import gaming apps
     ./gaming/steam.nix
+
+    # Import shared modules
+    ./shared/audio.nix
+    ./shared/bootloader.nix
+    ./shared/networking.nix
+    ./shared/nixFeatures.nix
+    ./shared/services.nix
   ];
 
   # Allow unfree packages
