@@ -18,17 +18,23 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
-  {
-    nixosConfigurations = {
-      gamingpc = nixpkgs.lib.nixosSystem{
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./hosts/gamingpc/configuration.nix
-        ];
-      };
+    betterfox-nix = {
+      url = "github:HeitorAugustoLN/betterfox-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations = {
+        gamingpc = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/gamingpc/configuration.nix
+          ];
+        };
+      };
+    };
 }

@@ -43,7 +43,7 @@
         ];
         # Add apps to dock.
         favorite-apps = [
-          "librewolf.desktop"
+          "firefox.desktop"
           "nautilus.desktop"
           "steam.desktop"
           "spotify.desktop"

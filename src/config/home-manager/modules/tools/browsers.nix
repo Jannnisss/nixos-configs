@@ -7,6 +7,10 @@
 }:
 
 {
+  imports = [
+    inputs.betterfox-nix.homeManagerModules.betterfox
+  ];
+
   options = {
     home-configurations.tools.browsers = {
       enable = lib.mkEnableOption {
@@ -22,25 +26,38 @@
 
   config = lib.mkMerge [
     (lib.mkIf config.home-configurations.tools.browsers.enable {
-      # Install LibreWolf.
+      # Installs firefox with betterfox
       programs.firefox = {
         enable = true;
-        package = pkgs.librewolf;
+        profiles.default = {
+          search = {
+            force = true;
+            default = "Startpage";
+            engines = {
+              "Startpage" = {
+                urls = [
+                  {
+                    template = "https://www.startpage.com/rvd/search?query={searchTerms}&language=auto";
+                  }
+                ];
+                icon = "https://www.startpage.com/sp/cdn/favicons/mobile/android-icon-192x192.png";
+                updateInterval = 24 * 60 * 60 * 1000;
+                definedAliases = [ "@startpage" ];
+              };
+            };
+          };
+          betterfox = {
+            enable = true;
+            enableAllSections = true;
+          };
+          settings = {
+            "browser.aboutConfig.showWarning" = false;
+            "browser.newtabpage.activity-stream.feeds.topsites" = false;
+            "browser.urlbar.suggest.searches" = false;
+            "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+          };
+        };
         policies = {
-          DisableTelemetry = true;
-          DisableFirefoxStudies = true;
-          DisableDataSubmission = true;
-          DisableCrashReports = true;
-          DisableSafeBrowsing = true;
-          DefaultSearchEngine = "Startpage";
-          SearchBar = "unified";
-          Homepage = {
-            StartPage = "blank";
-            URL = "about:blank";
-          };
-          Preferences = {
-            #"privacy.resistFingerprinting" = false;
-          };
           ExtensionSettings = {
             "uBlock0@raymondhill.net" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -73,15 +90,15 @@
           };
         };
       };
-      # Set librewolf as default browser
+
+      # Set firefox as default browser
       xdg.mimeApps = {
         enable = true;
-        # Set LibreWolf as the default for common web protocols/types
         defaultApplications = {
-          "text/html" = [ "librewolf.desktop" ];
-          "x-scheme-handler/http" = [ "librewolf.desktop" ];
-          "x-scheme-handler/https" = [ "librewolf.desktop" ];
-          "x-scheme-handler/about" = [ "librewolf.desktop" ]; # Optional, for about: links
+          "text/html" = [ "firefox.desktop" ];
+          "x-scheme-handler/http" = [ "firefox.desktop" ];
+          "x-scheme-handler/https" = [ "firefox.desktop" ];
+          "x-scheme-handler/about" = [ "firefox.desktop" ]; # about: links
         };
       };
     })
