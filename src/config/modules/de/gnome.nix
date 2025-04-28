@@ -21,14 +21,7 @@
     services.xserver.enable = false;
 
     # Enable the GNOME Desktop Environment.
-    services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
-
-    # Enable auto suspend on login screen.
-    services.xserver.displayManager.gdm.autoSuspend = true;
-
-    # Enable touchpad support (enabled default in most desktopManager).
-    services.libinput.enable = true;
 
     # Remove not needed GNOME packages.
     environment.gnome.excludePackages = with pkgs; [

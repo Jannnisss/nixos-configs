@@ -35,6 +35,12 @@
             ./hosts/gamingpc/configuration.nix
           ];
         };
+        hyperland = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/hyperland/configuration.nix
+          ];
+        };
       };
     };
 }

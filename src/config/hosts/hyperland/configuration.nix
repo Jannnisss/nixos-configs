@@ -23,10 +23,9 @@
 
   system-configurations = {
     # Define Deskop Enviroment
-    de.gnome.enable = true;
+    de.hyperland.enable = true;
     # Define Gnome Display Manager.
     dm.gdm.enable = true;
-
     # Define critical system components
     shared = {
       networking = {
@@ -60,7 +59,7 @@
   };
   # Import home manager for user
   home-manager = {
-    users.jannis = import ./../../home-manager/hosts/gamingpc/home.nix;
+    users.jannis = import ./../../home-manager/hosts/hyperland/home.nix;
     extraSpecialArgs = { inherit inputs; };
   };
 
