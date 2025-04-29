@@ -52,8 +52,10 @@
           };
           settings = {
             "browser.aboutConfig.showWarning" = false;
-            "browser.newtabpage.activity-stream.feeds.topsites" = false;
             "browser.urlbar.suggest.searches" = false;
+            "browser.urlbar.suggest.recentsearches" = false;
+            "browser.tabs.hoverPreview.enabled" = false;
+            "browser.newtabpage.activity-stream.feeds.topsites" = false;
             "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
           };
         };
