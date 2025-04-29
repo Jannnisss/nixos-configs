@@ -8,7 +8,7 @@
   imports = [
     # Import Desktop enviroments
     ./de/gnome.nix
-    ./de/hyperland.nix
+    ./de/hyprland.nix
 
     # Import Display manager
     ./dm/gdm.nix

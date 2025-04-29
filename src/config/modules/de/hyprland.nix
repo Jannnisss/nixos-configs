@@ -8,15 +8,15 @@
 {
 
   options = {
-    system-configurations.de.hyperland = {
+    system-configurations.de.hyprland = {
       enable = lib.mkEnableOption {
-        description = "Enables Hyperland desktop enviroment.";
+        description = "Enables Hyprland desktop enviroment.";
         default = false;
       };
     };
   };
 
-  config = lib.mkIf config.system-configurations.de.hyperland.enable {
+  config = lib.mkIf config.system-configurations.de.hyprland.enable {
     # Enable the X11 windowing system.
     services.xserver.enable = false;
 
