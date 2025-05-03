@@ -21,6 +21,7 @@
       lutris
       prismlauncher
       modrinth-app
+      lunar-client
     ];
   };
 }
