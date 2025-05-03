@@ -57,6 +57,9 @@
             "browser.tabs.hoverPreview.enabled" = false;
             "browser.newtabpage.activity-stream.feeds.topsites" = false;
             "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+            "extensions.formautofill.addresses.enabled" = false;
+            "extensions.formautofill.creditCards.enabled" = false;
+            "signon.rememberSignons" = false;
           };
         };
         policies = {
