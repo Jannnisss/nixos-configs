@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           
       - name: Install nix
         uses: cachix/install-nix-action@v31
@@ -32,11 +32,9 @@ jobs:
           commit_message: Update flake.lock
           branch: main
           commit_options: '--no-verify --signoff'
-          file_pattern: 'flake.lock'
+          file_pattern: '**/flake.lock'
           commit_user_name: Flake Update Bot # defaults to "github-actions[bot]"
           #commit_user_email: my-github-actions-bot@example.org # defaults to "41898282+github-actions[bot]@users.noreply.github.com"
           commit_author: Author <actions@github.com> # defaults to "username <numeric_id+username@users.noreply.github.com>", where "numeric_id" and "username" belong to the author of the commit that triggered the run
           skip_dirty_check: false    
           create_branch: false
-          #skip_fetch: true
-          #disable_globbing: true
