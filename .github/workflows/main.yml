@@ -16,14 +16,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
+
+      - name: Install nix
+        uses: cachix/install-nix-action@v31
 
       - name: Update flake.lock
-      - uses: cachix/install-nix-action@v31      
-      - run: nix flake update --flake ./src/config
+        run: nix flake update --flake ./src/config
       
       - name: Commit flake.lock changes
-      - uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update flake.lock
           branch: main
