@@ -37,3 +37,4 @@ jobs:
           skip_dirty_check: false    
           create_branch: false
           skip_fetch: true
+          disable_globbing: true
