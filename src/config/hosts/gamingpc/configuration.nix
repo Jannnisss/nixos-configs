@@ -38,6 +38,7 @@
       nixFeatures.enable = true;
       services = {
         enablePrinting = true;
+        enableTailscale = true;
       };
     };
 
