@@ -20,7 +20,6 @@
   config = lib.mkIf config.home-configurations.developemt.cli.enable {
     home.packages = with pkgs; [
       nixfmt-rfc-style
-      git
     ];
   };
 }

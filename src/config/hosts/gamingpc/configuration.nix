@@ -39,6 +39,14 @@
       services = {
         enablePrinting = true;
         enableTailscale = true;
+        autoupdate = {
+          enable = true;
+          flakePath = "/home/jannis/Documents/Repos/nixos-configs/src/config";
+          configName = "gamingpc";
+        };
+      };
+      tools = {
+        enableGit = true;
       };
     };
 

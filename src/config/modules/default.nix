@@ -25,6 +25,7 @@
     ./shared/networking.nix
     ./shared/nixFeatures.nix
     ./shared/services.nix
+    ./shared/tools.nix
   ];
 
   # Allow unfree packages
