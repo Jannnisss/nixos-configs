@@ -60,12 +60,7 @@
           Type = "oneshot";
           User = "root";
           Environment = [
-            "PATH=${
-              lib.makeBinPath [
-                pkgs.git
-                pkgs.nix
-              ]
-            }:/run/current-system/sw/bin"
+            "PATH=/run/current-system/sw/bin"
           ];
 
         };
