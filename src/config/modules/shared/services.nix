@@ -69,7 +69,7 @@
       systemd.timers.auto-update-flake = {
         wantedBy = [ "timers.target" ];
         timerConfig = {
-          OnCalendar = "daily 05:00";
+          OnCalendar = "05:00";
           Persistent = true;
         };
       };
