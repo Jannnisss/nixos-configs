@@ -68,6 +68,8 @@
 
       systemd.timers.auto-update-flake = {
         wantedBy = [ "timers.target" ];
+        after = [ "network-online.target" ];
+        wants = [ "network-online.target" ];
         timerConfig = {
           OnCalendar = "05:00";
           Persistent = true;
