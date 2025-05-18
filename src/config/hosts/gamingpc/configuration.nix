@@ -21,6 +21,9 @@
     ./../../modules/default.nix
   ];
 
+  # Use latest linux kernel instead of LTS
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   system-configurations = {
     # Define Deskop Enviroment
     de.gnome.enable = true;
