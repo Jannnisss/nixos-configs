@@ -59,10 +59,24 @@
             "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
             "extensions.formautofill.addresses.enabled" = false;
             "extensions.formautofill.creditCards.enabled" = false;
+            "browser.formfill.enable" = false;
             "signon.rememberSignons" = false;
           };
         };
         policies = {
+          DisableTelemetry = true;
+          DisableFirefoxStudies = true;
+          DisablePocket = true;
+          OverrideFirstRunPage = "";
+          OverridePostUpdatePage = "";
+          DontCheckDefaultBrowser = true;
+          DisplayBookmarksToolbar = "always"; # alternatives: "never" or "newtab"
+          DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
+          SearchBar = "unified"; # alternative: "separate"
+          DNSOverHTTPS = {
+            Enabled = true;
+          };
+
           ExtensionSettings = {
             "uBlock0@raymondhill.net" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
