@@ -32,6 +32,8 @@
         extensions = with pkgs.vscode-marketplace; [
           ms-vscode.vs-keybindings
           jnoortheen.nix-ide
+          mkhl.direnv
+          angular.ng-template
         ];
       };
     };

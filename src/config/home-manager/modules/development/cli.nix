@@ -21,5 +21,9 @@
     home.packages = with pkgs; [
       nixfmt-rfc-style
     ];
+    programs.direnv = {
+      enable = true;
+      enableBashIntegration = true;
+    };
   };
 }
