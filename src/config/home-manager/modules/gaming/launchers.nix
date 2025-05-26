@@ -18,10 +18,18 @@
 
   config = lib.mkIf config.home-configurations.gaming.launchers.enable {
     home.packages = with pkgs; [
-      lutris
       prismlauncher
       modrinth-app
       lunar-client
     ];
+    programs.lutris = {
+      enable = true;
+      extraPackages = with pkgs; [
+        umu-launcher
+      ];
+      protonPackages = with pkgs; [
+        proton-ge-bin
+      ];
+    };
   };
 }
