@@ -32,19 +32,7 @@
         profiles.default = {
           search = {
             force = true;
-            default = "Startpage";
-            engines = {
-              "Startpage" = {
-                urls = [
-                  {
-                    template = "https://www.startpage.com/rvd/search?query={searchTerms}&language=auto";
-                  }
-                ];
-                icon = "https://www.startpage.com/sp/cdn/favicons/mobile/android-icon-192x192.png";
-                updateInterval = 24 * 60 * 60 * 1000;
-                definedAliases = [ "@startpage" ];
-              };
-            };
+            default = "ddg";
           };
           betterfox = {
             enable = true;
