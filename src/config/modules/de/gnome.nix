@@ -21,7 +21,7 @@
     services.xserver.enable = false;
 
     # Enable the GNOME Desktop Environment.
-    services.xserver.desktopManager.gnome.enable = true;
+    services.desktopManager.gnome.enable = true;
 
     # Remove not needed GNOME packages.
     environment.gnome.excludePackages = with pkgs; [

@@ -19,10 +19,10 @@
   config = lib.mkIf config.system-configurations.dm.gdm.enable {
 
     # Enable the GNOME display manager.
-    services.xserver.displayManager.gdm.enable = true;
+    services.displayManager.gdm.enable = true;
 
     # Enable auto suspend on login screen.
-    services.xserver.displayManager.gdm.autoSuspend = true;
+    services.displayManager.gdm.autoSuspend = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
     services.libinput.enable = true;
