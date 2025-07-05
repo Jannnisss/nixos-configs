@@ -45,10 +45,12 @@
             "browser.tabs.hoverPreview.enabled" = false;
             "browser.newtabpage.activity-stream.feeds.topsites" = false;
             "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+            "browser.urlbar.showSearchTerms.enabled" = false;
             "extensions.formautofill.addresses.enabled" = false;
             "extensions.formautofill.creditCards.enabled" = false;
             "browser.formfill.enable" = false;
             "signon.rememberSignons" = false;
+            "privacy.globalprivacycontrol.enabled" = true;
           };
         };
         policies = {
