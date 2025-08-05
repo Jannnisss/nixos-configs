@@ -37,6 +37,7 @@
         hostName = "nixos";
       };
       audio.enable = true;
+      usbmuxd.enable = true;
       bootloader.enable = true;
       nixFeatures.enable = true;
       services = {

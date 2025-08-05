@@ -26,6 +26,7 @@
     ./shared/nixFeatures.nix
     ./shared/services.nix
     ./shared/tools.nix
+    ./shared/usb.nix
   ];
 
   # Allow unfree packages
