@@ -20,6 +20,7 @@
   config = lib.mkIf config.home-configurations.tools.cli.enable {
     home.packages = with pkgs; [
       tree
+      appimage-run
     ];
   };
 }
