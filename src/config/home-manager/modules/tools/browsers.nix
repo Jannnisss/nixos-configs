@@ -8,7 +8,6 @@
 
 {
   imports = [
-    inputs.betterfox-nix.homeManagerModules.betterfox
   ];
 
   options = {
@@ -33,10 +32,6 @@
           search = {
             force = true;
             default = "ddg";
-          };
-          betterfox = {
-            enable = true;
-            enableAllSections = true;
           };
           settings = {
             "browser.aboutConfig.showWarning" = false;
