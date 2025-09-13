@@ -42,7 +42,7 @@
       nixFeatures.enable = true;
       services = {
         enablePrinting = true;
-        enableTailscale = true;
+        enableTailscale = false;
         autoupdate = {
           enable = true;
           flakePath = "/home/jannis/Documents/Repos/nixos-configs/src/config";
