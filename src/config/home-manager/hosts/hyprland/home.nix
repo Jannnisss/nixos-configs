@@ -25,7 +25,7 @@
       enable = true;
       enableExtraBrowsers = true;
     };
-    tools.security.enable = true;
+    tools.security.general.enable = true;
     tools.office.enable = true;
     tools.cli.enable = true;
   };
