@@ -9,16 +9,32 @@
 {
   options = {
     home-configurations.tools.security = {
-      enable = lib.mkEnableOption {
-        description = "Enables security apps home manager configurations.";
-        default = false;
+      general = {
+        enable = lib.mkEnableOption {
+          description = "Enables security apps home manager configurations.";
+          default = false;
+        };
+      };
+      passwordmanager = {
+        enable = lib.mkEnableOption {
+          description = "Enables passwordmanager app home manager configurations.";
+          default = false;
+        };
       };
     };
   };
-  config = lib.mkIf config.home-configurations.tools.security.enable {
-    home.packages = with pkgs; [
-      veracrypt
-      yubioath-flutter
-    ];
-  };
+
+  config = lib.mkMerge [
+    (lib.mkIf config.home-configurations.tools.security.general.enable {
+      home.packages = with pkgs; [
+        veracrypt
+        yubioath-flutter
+      ];
+    })
+    (lib.mkIf config.home-configurations.tools.security.passwordmanager.enable {
+      home.packages = with pkgs; [
+        proton-pass
+      ];
+    })
+  ];
 }

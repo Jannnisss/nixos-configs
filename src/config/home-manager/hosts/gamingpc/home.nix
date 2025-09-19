@@ -23,13 +23,18 @@
 
     social.voicechat.enable = true;
 
-    tools.browsers = {
-      enable = true;
-      enableExtraBrowsers = true;
+    tools = {
+      security = {
+        general.enable = true;
+        passwordmanager.enable = true;
+      };
+      office.enable = true;
+      cli.enable = true;
+      browsers = {
+        enable = true;
+        enableExtraBrowsers = true;
+      };
     };
-    tools.security.enable = true;
-    tools.office.enable = true;
-    tools.cli.enable = true;
   };
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
