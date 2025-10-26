@@ -36,6 +36,12 @@
             ./hosts/hyprland/configuration.nix
           ];
         };
+        desktop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/desktop/configuration.nix
+          ];
+        };
       };
     };
 }
