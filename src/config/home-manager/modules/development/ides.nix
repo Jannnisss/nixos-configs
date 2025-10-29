@@ -28,6 +28,8 @@
         userSettings = {
           "telemetry.telemetryLevel" = "off";
           "editor.formatOnSave" = true;
+          "git.autofetch" = "true";
+          "git.fetchOnPull" = true;
         };
         extensions = with pkgs.vscode-marketplace; [
           ms-vscode.vs-keybindings
