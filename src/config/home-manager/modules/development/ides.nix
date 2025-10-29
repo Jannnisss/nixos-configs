@@ -30,6 +30,9 @@
           "editor.formatOnSave" = true;
           "git.autofetch" = "true";
           "git.fetchOnPull" = true;
+          "git.enableSmartCommit" = true;
+          "git.pruneOnFetch" = true;
+          "git.confirmSync" = false;
         };
         extensions = with pkgs.vscode-marketplace; [
           ms-vscode.vs-keybindings
