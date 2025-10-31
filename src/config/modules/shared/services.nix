@@ -17,9 +17,6 @@
         default = false;
         description = "Enables Tailscale services.";
       };
-      # Needs /root/.gitconfig when using user owned repository
-      # [safe]
-      # directory = /home/jannis/Documents/Repos/nixos-configs
       autoupdate = {
         enable = lib.mkEnableOption {
           description = "Enables nixos update script.";
@@ -27,7 +24,7 @@
         };
         flakePath = lib.mkOption {
           type = lib.types.str;
-          description = "Full local path to the flake.";
+          description = "Full local path to the git repository.";
           example = "/etc/nixos";
         };
         configName = lib.mkOption {
@@ -52,7 +49,12 @@
       systemd.services.auto-update-flake = {
         script = ''
           set -e
-          cd ${config.system-configurations.shared.services.autoupdate.flakePath}
+          repoPath=${config.system-configurations.shared.services.autoupdate.flakePath}
+          gitDirs=$(git config --global --get-all safe.directory || true)
+          if ! echo "$gitDirs" | grep -qx "$repoPath"; then
+            git config --global --add safe.directory "$repoPath"
+          fi
+          cd $repoPath/src/config
           git pull
           nixos-rebuild switch --flake .#${config.system-configurations.shared.services.autoupdate.configName}
         '';

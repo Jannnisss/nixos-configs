@@ -45,7 +45,7 @@
         enableTailscale = false;
         autoupdate = {
           enable = true;
-          flakePath = "/home/jannis/Documents/Repos/nixos-configs/src/config";
+          flakePath = "/home/jannis/Documents/Repos/nixos-configs";
           configName = "gamingpc";
         };
       };
