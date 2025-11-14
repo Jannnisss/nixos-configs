@@ -22,7 +22,7 @@
           description = "Enables nixos update script.";
           default = false;
         };
-        flakePath = lib.mkOption {
+        repositoryPath = lib.mkOption {
           type = lib.types.str;
           description = "Full local path to the git repository.";
           example = "/etc/nixos";
@@ -49,7 +49,7 @@
       systemd.services.auto-update-flake = {
         script = ''
           set -e
-          repoPath=${config.system-configurations.shared.services.autoupdate.flakePath}
+          repoPath=${config.system-configurations.shared.services.autoupdate.repositoryPath}
           gitDirs=$(git config --global --get-all safe.directory || true)
           if ! echo "$gitDirs" | grep -qx "$repoPath"; then
             git config --global --add safe.directory "$repoPath"
