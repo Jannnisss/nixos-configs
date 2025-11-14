@@ -24,7 +24,7 @@
     # Install spotify with customization.
     programs.spicetify =
       let
-        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.systems};
       in
       {
         enable = true;
