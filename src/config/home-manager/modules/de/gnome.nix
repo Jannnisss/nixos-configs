@@ -44,7 +44,7 @@
         # Add apps to dock.
         favorite-apps = [
           "firefox.desktop"
-          "nautilus.desktop"
+          "org.gnome.Nautilus.desktop"
           "steam.desktop"
           "spotify.desktop"
           "vesktop.desktop"
