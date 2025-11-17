@@ -19,7 +19,10 @@
     gaming.launchers.enable = true;
     gaming.modding.enable = true;
 
-    media.music.enable = true;
+    media = {
+      music.enable = true;
+      pictures.enable = true;
+    };
 
     social.voicechat.enable = true;
 

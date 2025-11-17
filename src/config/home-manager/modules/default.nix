@@ -29,6 +29,7 @@
 
     # Import media apps
     ./media/music.nix
+    ./media/pictures.nix
   ];
 
   # Allow unfree packages
