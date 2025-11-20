@@ -30,12 +30,6 @@
             ./hosts/gamingpc/configuration.nix
           ];
         };
-        hyprland = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/hyprland/configuration.nix
-          ];
-        };
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
